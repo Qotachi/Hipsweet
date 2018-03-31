@@ -1,3 +1,7 @@
+.container{
+  @extend %clearfix;
+}
+
 .section1{
 	font-family: "Arial";
 	color: white;
