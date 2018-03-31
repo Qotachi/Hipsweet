@@ -1,0 +1,26 @@
+{
+  "name": "hipsweet",
+  "description": "landing",
+  "main": "index",
+  "keywords": [
+    "cook"
+  ],
+  "authors": [
+    "Qotachi"
+  ],
+  "license": "MIT",
+  "homepage": "undefined",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bxslider-4": "bx-slider.js#^4.2.12",
+    "fancybox": "^3.2.5",
+    "svg4everybody": "^2.1.9"
+  }
+}

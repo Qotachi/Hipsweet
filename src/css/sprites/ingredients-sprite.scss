@@ -1,0 +1,35 @@
+.ingredients-sprite {
+    background-image: url(../../assets/images/section1/main/ingredients-sprite.png);
+    background-repeat: no-repeat;
+    @include inline-block(middle);
+}
+
+.ingredients-sprite-1 {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -52px;
+}
+
+.ingredients-sprite-2 {
+    width: 22px;
+    height: 17px;
+    background-position: -10px -132px;
+}
+
+.ingredients-sprite-3 {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -169px;
+}
+
+.ingredients-sprite-4 {
+    width: 26px;
+    height: 19px;
+    background-position: -10px -93px;
+}
+
+.ingredients-sprite-5 {
+    width: 18px;
+    height: 22px;
+    background-position: -10px -10px;
+}

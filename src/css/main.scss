@@ -1,0 +1,19 @@
+//vars
+$yellow: #fca211;
+$red: #a4151c;
+$brown: #641a00;
+$grey: #575757;
+
+//layout
+@import "_misc/fonts.scss";
+@import "_misc/mixins.scss";
+@import "_misc/normalize.scss";
+@import "_misc/adjustment.scss";
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/fa-solid.scss";
+@import "fontawesome/fa-brands.scss";
+@import "sprites/ingredients-sprite.scss";
+
+//styles
+@import "sections/section1.scss";
+@import "sections/footer.scss";

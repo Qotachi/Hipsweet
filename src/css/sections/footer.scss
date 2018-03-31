@@ -1,0 +1,69 @@
+.footer{
+  @extend %clearfix;
+  background-color: white;
+}
+
+.footer__left{
+  @extend %clearfix;
+  float: left;
+  padding-top: 29px;
+  padding-right: 40px;
+}
+
+.logo-footer{
+  padding: 0;
+}
+
+.logo__pic-footer{
+  width: 66px;
+  height: 55px;
+}
+
+.logo__txt-footer{
+  font-size: 30px;
+}
+
+.footer__middle{
+  @extend %clearfix;
+  padding-top: 50px;
+  float: left;
+  color: #8d8d8d;
+  font-size: 14px;
+}
+
+.copyright{
+  float: left;
+  padding-right: 40px;
+}
+
+.address{
+  float: right;
+}
+
+.footer__right{
+  float: right;
+  padding-top: 40px;
+}
+
+.socials{
+  text-align: right;
+}
+
+.socials__item{
+  display: inline-block;
+  padding-right: 25px;
+  &:last-child{
+    padding-right: 0;
+  }
+}
+
+.socials__item-ico{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  fill: #cccdd9;
+  transition: fill .5s;
+  &:hover{
+    fill: $yellow;
+  }
+}

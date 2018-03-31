@@ -1,0 +1,488 @@
+.section1{
+	font-family: "Arial";
+	color: white;
+	background: rgba(201,49,54,1);
+	background: -moz-linear-gradient(left, rgba(201,49,54,1) 0%, rgba(162,22,27,1) 91%, rgba(162,22,27,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(201,49,54,1)), color-stop(91%, rgba(162,22,27,1)), color-stop(100%, rgba(162,22,27,1)));
+	background: -webkit-linear-gradient(left, rgba(201,49,54,1) 0%, rgba(162,22,27,1) 91%, rgba(162,22,27,1) 100%);
+	background: -o-linear-gradient(left, rgba(201,49,54,1) 0%, rgba(162,22,27,1) 91%, rgba(162,22,27,1) 100%);
+	background: -ms-linear-gradient(left, rgba(201,49,54,1) 0%, rgba(162,22,27,1) 91%, rgba(162,22,27,1) 100%);
+	background: linear-gradient(to right, rgba(201,49,54,1) 0%, rgba(162,22,27,1) 91%, rgba(162,22,27,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c93136', endColorstr='#a2161b', GradientType=1 );
+	padding-bottom: 30px;
+}
+
+//header
+.header{
+	@extend %clearfix;
+	padding-top: 25px;
+	margin-bottom: 100px;
+}
+
+.logo{
+	@extend %clearfix;
+	float: left;
+	padding-right: 110px;
+}
+
+.logo__pic{
+	float: left;
+	width: 81px;
+	height: 67px;
+}
+
+.logo__pic-img{
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.logo__txt{
+	padding: 9px 0 9px 20px;
+	float: left;
+	@include malina;
+	font-size: 35px;
+	color: $yellow;
+}
+
+.nav{
+	float: left;
+}
+
+.nav__list{
+	@extend %clearfix;
+	display: block;
+	padding: 22px 0;
+}
+
+.nav__list-item{
+	position: relative;
+	display: block;
+	float: left;
+	font-size: 16px;
+	letter-spacing: 2px;
+	padding-right: 65px;
+	&:last-child{
+		padding-right: 0;
+	}
+}
+
+.nav__list-item-team-link{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+
+.fa-angle-down{
+	font-size: 10px;
+	@include transition(opacity .5s);
+}
+
+.fa-angle-up{
+	position: absolute;
+	font-size: 10px;
+	opacity: 0;
+	left: 86px;
+	top: 7px;
+	@include transition(opacity .5s);
+}
+
+//team dropdown
+.nav__list-item-a{
+	cursor: pointer;
+	&:hover{
+		.fa-angle-down{
+			opacity: 0;
+		}
+		.fa-angle-up{
+			opacity: 1;
+		}
+		.nav__list-item-team-link{
+			color: $yellow;
+		}
+		.nav__list-item-team-dropdown{
+			left: 50%;
+			opacity: 1;
+		}
+	}
+}
+
+.nav__list-item-team-dropdown{
+	text-align: left;
+	background-color: rgba(white, .92);
+	border-radius: 25px;
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	margin-left: -115px;
+	padding: 45px 50px;
+	z-index: 1000;
+	left: -9999px;
+	opacity: 0;
+	@include transition(opacity .5s);
+	&:before{
+		display: block;
+		content:"";
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 70px;
+		top: -60px;
+	}
+}
+
+.nav__list-item-team-dropdown-item{
+	display: inline-block;
+	letter-spacing: 0;
+	min-width: 130px;
+	font-size: 16px;
+	padding: 25px 0;
+	margin-top: -25px;
+	color: $grey;
+	&:before{
+		position: absolute;
+		display: inline-block;
+		content: "";
+		width: 9px;
+		height: 18px;
+		right: 96.5%;
+		opacity: 0;
+		background-image: url(../../assets/images/section1/ico/yellow-arrow.png);
+	}
+	&:last-child{
+		padding-bottom: 0;
+	}
+	&:hover{
+		color: black;
+		font-weight: bold;
+		&:before{
+			opacity: 1;
+		}
+	}
+}
+
+.triangle{
+	width: 40px;
+	height: 13px;
+	position: absolute;
+	background-image: url("../../assets/images/section1/ico/arrow.png");
+	bottom: 100%;
+	left: 50%;
+	margin-left: -20px;
+}
+
+//header-menu
+.menu{
+	@extend %clearfix;
+	float: right;
+	padding: 12px 0;
+}
+
+.menu__profile, .menu__search{
+	display: block;
+	text-decoration: none;
+	float: left;
+	width: 42px;
+	height: 42px;
+}
+
+.menu__profile-img, .menu__search-img{
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.menu__profile{
+	position: relative;
+	margin-right: 20px;
+	&:hover{
+		.menu__profile-img-a{
+			opacity: 1;
+		}
+	}
+}
+
+.menu__search{
+	position: relative;
+	&:hover{
+		.menu__search-img-a{
+			opacity: 1;
+		}
+	}
+}
+
+.menu__profile-img-a{
+	position: absolute;
+	opacity: 0;
+	top: 0px;
+	@include transition(opacity .5s);
+}
+
+.menu__search-img-a{
+	position: absolute;
+	opacity: 0;
+	top: 0px;
+	@include transition(opacity .5s);
+}
+
+//main
+.main1{
+	@extend %clearfix;
+	position: relative;
+}
+
+.main1__left, .main1__middle{
+	@extend %clearfix;
+	position: relative;
+	float: left;
+	z-index: 1;
+}
+
+.main1__left{
+	width: 190px;
+	text-align: center;
+	z-index: 1000;
+}
+
+.main1__left-ingredients{
+	position: relative;
+	padding-top: 60px;
+	margin-bottom: 200px;
+	&:hover{
+		.main1__left-ingredients-img-a{
+			opacity: 1;
+		}
+		.main1__left-ingredients-dropdown{
+			left: 90%;
+			opacity: 1;
+		}
+	}
+}
+
+.main1__left-ingredients-link{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+
+.main1__left-ingredients-pic{
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+}
+
+.main1__left-ingredients-img{
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.main1__left-ingredients-img-a{
+	position: absolute;
+	opacity: 0;
+	top: 0px;
+	left: 74px;
+	@include transition(opacity .5s);
+}
+
+.main1__left-ingredients-txt{
+	font-size: 15px;
+	padding-top: 15px;
+}
+
+//ingredients-dropdown
+.main1__left-ingredients-dropdown{
+	position: absolute;
+	min-width: 370px;
+	z-index: 1000;
+	background-color: rgba(white, .92);
+	border-radius: 25px;
+	top: 0;
+	margin-left: 0;
+	padding: 40px 30px;
+	left: -9999px;
+	opacity: 0;
+	cursor: pointer;
+	@include transition(opacity .5s);
+	&:before{
+		cursor: pointer;
+		display: block;
+		content:"";
+		position: absolute;
+		left: -110px;
+		right: 330px;
+		height: 275px;
+		top: 0;
+	}
+	.triangle{
+		top: 75px;
+		bottom: 100%;
+		left: -26px;
+		margin-left: 0;
+		transform: rotate(-90deg);
+	}
+}
+
+.main1__left-ingredients-dropdown-item{
+	text-align: left;
+	font-size: 16px;
+	padding: 20px 0;
+	margin-top: -20px;
+	color: $grey;
+	&:last-child{
+		padding-bottom: 0;
+	}
+}
+
+.ingredients-sprite-wrap{
+	@include inline-block(middle);
+	width: 26px;
+	margin-right: 25px;
+	text-align: center;
+}
+
+.ingredients-text{
+	@include inline-block(middle);
+	min-width: 200px;
+}
+
+.ingredients-weight{
+	@include inline-block(middle);
+	min-width: 50px;
+}
+//main
+.main1__left-exptime{
+	.description{
+		color: rgba(white, .28);
+		margin: 0;
+	}
+}
+
+.value{
+	@include malina;
+	margin: 0;
+}
+
+.main1__middle-pic{
+	width: 471px;
+	height: 420px;
+}
+
+.main1__middle-img{
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.main1__right{
+	position: relative;
+	float: right;
+	width: 400px;
+	z-index: 1;
+	.title{
+		max-width: 300px;
+	}
+	.description{
+		max-width: 400px;
+	}
+}
+
+.title{
+	@include malina;
+	font-size: 62px;
+	line-height: 1.2;
+	margin-bottom: 30px;
+}
+
+.description{
+	font-size: 15px;
+	line-height: 21px;
+	margin-bottom: 30px;
+}
+
+.main1__right-order{
+	@extend %clearfix;
+	.title{
+		float: left;
+		@include inline-block;
+		margin-right: 50px;
+		margin-bottom: 0;
+	}
+}
+
+.main1__right-order-link{
+	float: left;
+	padding: 20px 0;
+}
+
+.main1__right-order-button{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border: 1px solid $yellow;
+	border-radius: 25px;
+	background-color: $yellow;
+	color: $red;
+	cursor: pointer;
+	outline: 0;
+	@include transition(all .5s);
+	&:hover{
+		background-color: $brown;
+		border-color: $brown;
+		color: $yellow;
+	}
+}
+
+.main1__cover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	&:before{
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 0;
+		vertical-align: middle;
+	}
+}
+
+.main1__cover-txt{
+	@include malina;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 150px;
+	color: rgba(white, .1);
+}
+
+//slider
+.bx-wrapper{
+	box-shadow: none;
+	border: 0;
+	background: none;
+}
+
+.bx-next, .bx-prev{
+	display: none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background-color: white;
+	width: 8px;
+	height: 8px;
+	margin: 0 15px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: $yellow;
+}
+
+
+
+
