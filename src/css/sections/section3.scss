@@ -1,20 +1,11 @@
-.section3__pattern-wrap{
-  background: url("../../assets/images/section3/section3-pattern.png");
-}
-
 .section3 {
   font-family: "Arial";
   .container {
     text-align: center;
   }
-  background: rgba(255, 170, 42, .9);
-  background: -moz-linear-gradient(left, rgba(255,170,42,1) 0%, rgba(255,184,5,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,170,42,1)), color-stop(100%, rgba(255,184,5,1)));
-  background: -webkit-linear-gradient(left, rgba(255,170,42,1) 0%, rgba(255,184,5,1) 100%);
-  background: -o-linear-gradient(left, rgba(255,170,42,1) 0%, rgba(255,184,5,1) 100%);
-  background: -ms-linear-gradient(left, rgba(255,170,42,1) 0%, rgba(255,184,5,1) 100%);
-  background: linear-gradient(left, rgba(255, 170, 42, 1) 0%, rgba(255, 184, 5, 1) 90%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaa2a', endColorstr='#ffb805', GradientType=1);
+  background: rgba(255,167,43,1);
+  background: url("../../assets/images/section3/section3-pattern.png"), linear-gradient(to right, rgba(255,167,43,1) 0%, rgba(255,183,1,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa72b', endColorstr='#ffb701', GradientType=1 );
 }
 
 .main3__top{
