@@ -1,8 +1,9 @@
 //vars
 $yellow: #fca211;
 $red: #a4151c;
-$brown: #641a00;
+$brown: #893213;
 $grey: #575757;
+$blue: #2b2f5f;
 
 //layout
 @import "_misc/fonts.scss";
@@ -19,3 +20,4 @@ $grey: #575757;
 @import "sections/footer.scss";
 @import "sections/section2.scss";
 @import "sections/section3.scss";
+@import "sections/section4.scss";

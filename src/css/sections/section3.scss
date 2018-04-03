@@ -1,11 +1,12 @@
 .section3 {
   font-family: "Arial";
-  .container {
-    text-align: center;
-  }
   background: rgba(255,167,43,1);
   background: url("../../assets/images/section3/section3-pattern.png"), linear-gradient(to right, rgba(255,167,43,1) 0%, rgba(255,183,1,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa72b', endColorstr='#ffb701', GradientType=1 );
+}
+
+.main3 {
+  text-align: center;
 }
 
 .main3__top{
@@ -24,6 +25,10 @@
 
 .description__link{
   color: #393939;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .main3__bottom{

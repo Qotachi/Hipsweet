@@ -19,8 +19,10 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "^3.3.1",
     "bxslider-4": "bx-slider.js#^4.2.12",
     "fancybox": "^3.2.5",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "jquery-mask-plugin": "^1.14.15"
   }
 }
