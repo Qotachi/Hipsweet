@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var notify = require('gulp-notify');
 var clean = require('gulp-clean');
 var replace = require('gulp-replace');
+var rename = require('gulp-rename');
 var cheerio = require('gulp-cheerio');
 var plumber = require('gulp-plumber');
 //bower
@@ -77,7 +78,7 @@ gulp.task('svgSpriteBuild', function() {
 });
 
 gulp.task('html', function(){
-    gulp.src('src/index.html')
+    return gulp.src('src/index.html')
         .pipe(wiredep({
             directory: 'bower_components/'
         }))
@@ -115,7 +116,8 @@ gulp.task('css', function(){
 gulp.task('js', function(){
     gulp.src('src/js/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('build/js'));
+        .pipe(rename("main.min.js"))
+        .pipe(gulp.dest('build/js/'));
 });
 
 gulp.task('assets', function(){

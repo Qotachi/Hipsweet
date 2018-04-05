@@ -369,6 +369,10 @@
 	margin: 0;
 }
 
+.main1__middle{
+	cursor: pointer;
+}
+
 .main1__middle-pic{
 	width: 471px;
 	height: 420px;
@@ -483,10 +487,13 @@
 	margin: 0 15px;
 }
 
-.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
-    background: $yellow;
+.bx-wrapper .bx-pager.bx-default-pager a{
+    background: white !important;
 }
 
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{
+	background: $yellow !important;
+}
 
 
 

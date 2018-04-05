@@ -1,8 +1,9 @@
 .section3 {
   font-family: "Arial";
-  background: rgba(255,167,43,1);
-  background: url("../../assets/images/section3/section3-pattern.png"), linear-gradient(to right, rgba(255,167,43,1) 0%, rgba(255,183,1,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa72b', endColorstr='#ffb701', GradientType=1 );
+  background: url(../../assets/images/section3/section3-bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .main3 {

@@ -68,14 +68,17 @@
 
 .description__tab-list {
   @extend %clearfix;
+  .active-d {
+    display: block;
+  }
 }
 
 .description__tab-item {
   @extend %clearfix;
+  display: none;
 }
 
 .main4__description-left {
-  display: none;
   float: left;
   max-width: 275px;
 }
@@ -101,7 +104,6 @@
 }
 
 .main4__description-right {
-  display: none;
   float: right;
   max-width: 330px;
 }
@@ -250,11 +252,5 @@
   }
   .triangle {
     opacity: 1;
-  }
-}
-
-.active-d {
-  .main4__description-left, .main4__description-right {
-    display: block;
   }
 }
