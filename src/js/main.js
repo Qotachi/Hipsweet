@@ -76,4 +76,29 @@ $(document).ready(function () {
             }
         });
     }());
+
+    //map
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [59.935775, 30.308935],
+            zoom: 16,
+            controls: []
+        });
+        var myPlacemark = new ymaps.Placemark(
+            [59.935775, 30.308935],
+            {
+                hintContent: 'Hipsweet',
+                balloonContent: 'Адмиралтейский проспект, дом 10'
+            },
+            {
+                iconLayout: 'default#image',
+                iconImageHref: '../assets/images/section6/marker.png',
+                iconImageSize: [42, 59],
+                iconImageOffset: [-20, -60]
+            });
+        myMap.behaviors.disable(['scrollZoom']);
+        myMap.geoObjects.add(myPlacemark);
+    };
 });
