@@ -14,21 +14,21 @@
   padding: 0;
 }
 
-.logo__pic-footer{
+.logo__pic_footer{
   width: 66px;
   height: 55px;
 }
 
-.logo__txt-footer{
+.logo__txt_footer{
   font-size: 30px;
 }
 
 .footer__middle{
   @extend %clearfix;
-  padding-top: 50px;
   float: left;
-  color: #8d8d8d;
+  padding-top: 50px;
   font-size: 14px;
+  color: $grey;
 }
 
 .copyright{
@@ -62,7 +62,7 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  fill: #cccdd9;
+  fill: $grey;
   transition: fill .5s;
   &:hover{
     fill: $yellow;

@@ -12,10 +12,11 @@ var wiredep = require('gulp-wiredep');
 var useref = require('gulp-useref');
 //sass=css
 var sass = require('gulp-sass');
+var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
-var cssnano = require('gulp-cssnano');
+var cssnano = require('cssnano');
 //js
 var uglify = require('gulp-uglify');
 //dev
@@ -106,9 +107,8 @@ gulp.task('css', function(){
         }))
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(autoprefixer())
         .pipe(concat('main.min.css'))
-        .pipe(cssnano())
+        .pipe(postcss([cssnano, autoprefixer]))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css'));
 });

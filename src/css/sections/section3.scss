@@ -19,7 +19,7 @@
   }
   .description{
     display: inline-block;
-    max-width: 790px;
+    max-width: 850px;
     color: #883213;
   }
 }
@@ -27,8 +27,8 @@
 .description__link{
   color: #393939;
   &:hover{
-    color: white;
     text-decoration: none;
+    color: white;
   }
 }
 
@@ -62,9 +62,9 @@
     margin-right: 0;
   }
   .description{
+    margin-bottom: 0;
     font-size: 14px;
     color: #ab594a;
-    margin-bottom: 0;
   }
 }
 
@@ -75,20 +75,20 @@
 }
 
 .main3__bottom-img-shape{
-  position: absolute;
   display: block;
-  object-fit: contain;
-  width: 180px;
-  height: 180px;
+  position: absolute;
   bottom: 30px;
   left: 25px;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
 }
 
 .main3__bottom-img{
-  position: absolute;
   display: block;
-  object-fit: contain;
-  width: 180px;
+  position: absolute;
   bottom: 43px;
   left: 25px;
+  width: 180px;
+  object-fit: contain;
 }

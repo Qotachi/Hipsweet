@@ -389,21 +389,21 @@
 	width: 400px;
 	.title{
 		max-width: 300px;
-		margin-bottom: 30px;
 	}
 	.description{
 		max-width: 400px;
-		margin-bottom: 30px;
 	}
 }
 
 .title{
 	@include malina;
+	margin-bottom: 30px;
 	font-size: 62px;
 	line-height: 1.2;
 }
 
 .description{
+	margin-bottom: 30px;
 	font-size: 15px;
 	line-height: 21px;
 }

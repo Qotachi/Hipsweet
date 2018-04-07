@@ -1,12 +1,7 @@
 .section2{
-  font-family: "Arial";
   @extend %clearfix;
+  font-family: "Arial";
   background: rgba(200,200,201,1);
-  background: -moz-linear-gradient(left, rgba(200,200,201,1) 0%, rgba(230,231,231,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(200,200,201,1)), color-stop(100%, rgba(230,231,231,1)));
-  background: -webkit-linear-gradient(left, rgba(200,200,201,1) 0%, rgba(230,231,231,1) 100%);
-  background: -o-linear-gradient(left, rgba(200,200,201,1) 0%, rgba(230,231,231,1) 100%);
-  background: -ms-linear-gradient(left, rgba(200,200,201,1) 0%, rgba(230,231,231,1) 100%);
   background: linear-gradient(to right, rgba(200,200,201,1) 0%, rgba(230,231,231,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c9', endColorstr='#e6e7e7', GradientType=1 );
 }
@@ -21,22 +16,24 @@
   padding-top: 115px;
   padding-bottom: 120px;
   .title{
-    color: #2b2f5f;
+    color: $blue;
     max-width: 440px;
   }
   .description{
-    color: #747474;
+    color: $grey;
     max-width: 430px;
   }
 }
 
 .main2__left-list{
   @extend %clearfix;
+  max-width: 550px;
 }
 
 .main2__left-list-item{
   float: left;
   margin-right: 35px;
+  margin-bottom: 20px;
   &:last-child{
     margin-right: 0;
   }
@@ -50,44 +47,44 @@
 }
 
 .main2__left-list-shape{
-  position: absolute;
   display: block;
-  object-fit: contain;
-  width: 110px;
-  height: 110px;
+  position: absolute;
   bottom: -5px;
   left: -15px;
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
 }
 
 .main2__left-list-img{
-  position: absolute;
   display: block;
-  object-fit: contain;
-  width: 90px;
+  position: absolute;
   bottom: 17px;
   left: -3px;
+  width: 90px;
+  object-fit: contain;
 }
 
 .main2__left-list-txt{
   @include malina;
-  font-size: 16px;
-  color: #747474;
   max-width: 140px;
+  font-size: 16px;
+  color: $grey;
 }
 
 .main2__right{
   position: absolute;
-  left:711px;
-  right:0;
-  top:0;
-  bottom:0;
   float: right;
+  top:0;
+  right:0;
+  bottom:0;
+  left:711px;
   &:before{
-    content: "";
     display: inline-block;
-    height: 100%;
     width: 0;
+    height: 100%;
     vertical-align: bottom;
+    content: "";
   }
 }
 

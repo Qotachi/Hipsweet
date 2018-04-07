@@ -6,12 +6,6 @@
 	}
 }
 
-@mixin box-shadow($box-shadow){
-	box-shadow: $box-shadow;
-	-webkit-box-shadow: $box-shadow;
-	-moz-box-shadow: $box-shadow;
-}
-
 @mixin transition($transition){
 	transition: $transition;
 	-webkit-box-shadow: $transition;
@@ -21,16 +15,4 @@
 @mixin inline-block($vert-align: top){
 	display: inline-block;
 	vertical-align: $vert-align;
-}
-
-//responsive
-@function rem($px){
-	@return $px / 16px + 0rem;
-}
-
-@mixin retina{
-	@media screen and (-webkit-min-device-pixel-ratio: 1.5),
-	screen and (min-resolution: 144dpi){
-		@content;
-	}
 }
