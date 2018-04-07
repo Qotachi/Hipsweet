@@ -9,7 +9,15 @@ $(document).ready(function () {
     });
 
     //----------------------<<anchor-scroll>>----------------------\\
-
+    $(function() {
+        $('.description__link').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1500);
+        });
+    }());
 
 
     //----------------------<<jquery-mask>>----------------------\\
