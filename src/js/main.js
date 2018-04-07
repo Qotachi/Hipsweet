@@ -1,15 +1,17 @@
 $(document).ready(function () {
 
+    //----------------------<<bxSlider>>----------------------\\
     $('.slider').bxSlider({
         speed: 1000
     });
 
-
+    //----------------------<<svg-for-ie>>----------------------\\
     svg4everybody();
 
+    //----------------------<<jquery-mask>>----------------------\\
     $('#tel').mask('8 (000) 000-00-00');
 
-    //tab-bar
+    //----------------------<<tab-bar>>----------------------\\
     (function () {
         var flag=true;
         $('.tab-bar__link').on('click', function (e) {
@@ -43,7 +45,7 @@ $(document).ready(function () {
         });
     }());
 
-    // acco
+    //----------------------<<accordion>>----------------------\\
     (function () {
         var flag = true;
 
@@ -77,7 +79,7 @@ $(document).ready(function () {
         });
     }());
 
-    //map
+    //----------------------<<map>>----------------------\\
     ymaps.ready(init);
 
     function init() {

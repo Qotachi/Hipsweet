@@ -1,7 +1,7 @@
 .ingredients-sprite {
+    @include inline-block(middle);
     background-image: url(../../assets/images/section1/main/ingredients-sprite.png);
     background-repeat: no-repeat;
-    @include inline-block(middle);
 }
 
 .ingredients-sprite-1 {
