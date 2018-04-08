@@ -35,7 +35,7 @@ $(document).ready(function () {
                 container = $this.closest('.main4__top'),
                 content = container.find('.description__tab-item'),
                 ndx = item.index(),
-                activeItem = content.filter('.active-d'),
+                activeItem = content.filter('.active'),
                 reqItem = content.eq(ndx),
                 duration = 500;
 
@@ -47,9 +47,9 @@ $(document).ready(function () {
 
                 activeItem.fadeOut(duration, function() {
                     reqItem.fadeIn(duration, function() {
-                        reqItem.addClass('active-d')
+                        reqItem.addClass('active')
                             .siblings()
-                            .removeClass('active-d');
+                            .removeClass('active');
                         flag = true;
                     });
                 });
@@ -72,17 +72,17 @@ $(document).ready(function () {
 
             if(flag){
                 flag = false;
-                if(!item.hasClass('active-acco')){
-                    item.addClass('active-acco')
+                if(!item.hasClass('active')){
+                    item.addClass('active')
                         .siblings()
-                        .removeClass('active-acco')
+                        .removeClass('active')
                         .find('.acco-item__txt')
                         .slideUp(500);
                     currentContent.slideDown(duration, function () {
                         flag = true;
                     });
                 } else{
-                    item.removeClass('active-acco');
+                    item.removeClass('active');
                     currentContent.slideUp(duration, function () {
                         flag = true;
                     });

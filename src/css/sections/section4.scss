@@ -1,11 +1,6 @@
 .section4 {
   font-family: Arial;
   background: rgba(252,251,251,1);
-  background: -moz-radial-gradient(center, ellipse cover, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(252,251,251,1)), color-stop(21%, rgba(252,251,251,1)), color-stop(100%, rgba(205,204,205,1)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
   background: radial-gradient(ellipse at center, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfbfb', endColorstr='#cdcccd', GradientType=1 );
 }
@@ -13,20 +8,19 @@
 .main4__top {
   @extend %clearfix;
   padding-top: 85px;
-  padding-bottom: 150px;
-  .title {
-    color: $blue;
-    max-width: 320px;
-  }
   .description {
     position: relative;
-    color: $grey;
     font-style: italic;
+    color: $grey;
   }
 }
 
 .tab-bar {
   margin-bottom: 100px;
+  .title {
+    max-width: 320px;
+    color: $blue;
+  }
 }
 
 .tab-bar-main-title {
@@ -34,41 +28,72 @@
   margin-right: 80px;
 }
 
-.tab-bar__list {
-  @extend %clearfix;
+.tab-bar__list{
+  .active {
+    background-color: $brown;
+    border-radius: 25px;
+    .title {
+      color: $yellow;
+    }
+    .tab-bar__list-item-description {
+      color: white;
+    }
+    .triangle {
+      opacity: 1;
+    }
+  }
 }
 
 .tab-bar__list-item {
+  display: inline-block;
   position: relative;
-  float: left;
   padding: 25px 30px;
   border-radius: 25px;
   transition: background-color .3s;
   .title {
-    font-size: 30px;
     max-width: 145px;
     margin-bottom: 15px;
+    font-size: 30px;
   }
   .triangle{
-    transition: opacity .3s;
+    top: 100%;
+    bottom: 0;
     width: 34px;
     height: 10px;
-    background-image: url("../../assets/images/section4/tab-arrow.png");
-    bottom: 0;
-    top: 100%;
     margin-left: -17px;
+    background-image: url("../../assets/images/section4/tab-arrow.png");
     opacity: 0;
+    transition: opacity .3s;
+  }
+  &:hover {
+    border-radius: 25px;
+    background-color: $brown;
+    .title {
+      color: $yellow;
+    }
+    .tab-bar__list-item-description {
+      color: white;
+    }
+    .triangle {
+      opacity: 1;
+    }
   }
 }
 
+.tab-bar__link {
+  display: block;
+  cursor: pointer;
+}
+
 .tab-bar__list-item-description {
-  color: $grey;
   letter-spacing: 1px;
+  color: $grey;
 }
 
 .description__tab-list {
   @extend %clearfix;
-  .active-d {
+  min-height: 600px;
+  .active {
     display: block;
   }
 }
@@ -76,15 +101,15 @@
 .description__tab-item {
   @extend %clearfix;
   display: none;
+  p{
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .main4__description-left {
   float: left;
   max-width: 275px;
-}
-
-.main4__description-left-txt {
-  margin-bottom: 25px;
 }
 
 .main4__description-bold {
@@ -93,8 +118,8 @@
 
 .quote-pic {
   position: absolute;
-  bottom: 410px;
-  left: 340px;
+  bottom: 480px;
+  left: 310px;
 }
 
 .quote-img {
@@ -108,31 +133,32 @@
   max-width: 330px;
 }
 
-.main4__description-right-p1 {
-  margin-bottom: 25px;
-}
-
-//form
+//----------------------<<form>>----------------------\\
 .main4__bottom {
-  text-align: center;
   padding-bottom: 120px;
+  text-align: center;
 }
 
 .form {
   @extend %clearfix;
-  position: relative;
   display: inline-block;
+  position: relative;
   width: 845px;
-  background-image: url(../../assets/images/section4/form-bg.gif);
   border-radius: 20px;
+  background-image: url(../../assets/images/section4/form-bg.gif);
+}
+
+::placeholder{
+  color: white;
+  opacity: 1;
 }
 
 .cook-pic{
   position: absolute;
   bottom: 100%;
+  left: 45%;
   width: 527px;
   height: 613px;
-  left: 45%;
   margin-left: -263.5px;
 }
 
@@ -143,13 +169,13 @@
 }
 
 .form__left {
+  float: left;
   width: 50%;
   text-align: center;
-  float: left;
   .title {
-    margin: 0;
-    padding: 110px 0;
     width: 100%;
+    padding: 110px 0;
+    margin: 0;
     color: white;
     -webkit-text-stroke: 2px black;
   }
@@ -160,30 +186,25 @@
   float: right;
   width: 50%;
   padding: 65px 45px;
-  background-color: rgba(black, .7);
   border-radius: 0 20px 20px 0;
-}
-
-::placeholder {
-  color: white;
-  opacity: 1;
+  background-color: rgba(black, .7);
 }
 
 .input {
   display: block;
+  width: 280px;
+  padding: 15px 20px;
   margin-bottom: 25px;
   outline: 0;
   border: none;
   border-bottom: 2px solid white;
-  color: white;
-  padding: 15px 20px;
-  width: 280px;
   background: none;
+  color: white;
 }
 
 .label {
-  position: relative;
   display: block;
+  position: relative;
   text-align: left;
   cursor: pointer;
 }
@@ -218,39 +239,19 @@
 }
 
 .submit-btn {
-  cursor: pointer;
   position: absolute;
+  display: block;
   bottom: -40px;
   right: -40px;
-  display: block;
   width: 96px;
   height: 96px;
+  padding: 0;
   border: 0;
   outline: 0;
-  padding: 0;
   background: none;
   background-image: url(../../assets/images/section4/submit-btn.png);
+  cursor: pointer;
   &:hover {
     background-image: url(../../assets/images/section4/submit-btn-hover.png);
-  }
-}
-
-//js
-.tab-bar__link {
-  display: block;
-  cursor: pointer;
-}
-
-.active {
-  background-color: $brown;
-  border-radius: 25px;
-  .title {
-    color: $yellow;
-  }
-  .tab-bar__list-item-description {
-    color: white;
-  }
-  .triangle {
-    opacity: 1;
   }
 }

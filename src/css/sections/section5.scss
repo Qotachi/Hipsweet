@@ -1,6 +1,6 @@
 .section5{
-  font-family: Arial;
   min-height: 810px;
+  font-family: Arial;
   background: url(../../assets/images/section5/section5-bg.png);
   background-size: cover;
   background-position: center center;
@@ -24,6 +24,14 @@
 .acco-list{
   max-width: 880px;
   color: white;
+  .active{
+    .acco-item__link {
+      span {
+        background: none;
+      }
+      color: $yellow;
+    }
+  }
 }
 
 .acco-item{
@@ -34,8 +42,8 @@
 }
 
 .acco-item__link{
-  text-decoration: none;
   font-size: 22px;
+  text-decoration: none;
   color: white;
   span {
     padding-bottom: 12px;
@@ -58,8 +66,8 @@
     b24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6MjbodAAAAOUlE
     QVR42mL8//+/AgMDQwIDJngAxAswRIEaHP5jBweAmAEdswD1fADig1hsuIBFjIERpIsUABBgAEXk
     NFkf0ak+AAAAAElFTkSuQmCC");
-    background-repeat: repeat-x;
     background-position: left bottom;
+    background-repeat: repeat-x;
   }
   &:hover{
     span{
@@ -71,22 +79,10 @@
 
 .acco-item__txt{
   display: none;
-  font-size: 15px;
   padding: 30px 0 0px 70px;
+  font-size: 15px;
 }
 
 .acco-item__txt_active{
   display: block;
-}
-
-.active-acco{
-  .acco-item__link {
-    span {
-      background: none;
-    }
-    color: $yellow;
-  }
-  //.acco-item__txt{
-  //  display: block;
-  //}
 }
