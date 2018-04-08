@@ -6,12 +6,6 @@
 	}
 }
 
-@mixin transition($transition){
-	transition: $transition;
-	-webkit-box-shadow: $transition;
-	-moz-box-shadow: $transition;
-}
-
 @mixin inline-block($vert-align: top){
 	display: inline-block;
 	vertical-align: $vert-align;
