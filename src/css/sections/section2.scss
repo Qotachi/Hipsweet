@@ -73,25 +73,16 @@
 }
 
 .main2__right{
-  position: absolute;
-  float: right;
-  right:0;
-  bottom:0;
-  left:711px;
-  &:before{
-    display: inline-block;
-    width: 0;
-    height: 100%;
-    vertical-align: bottom;
-    content: "";
-  }
+  position: relative;
 }
 
 .main2__right-pic{
-  display: inline-block;
+  position: absolute;
+  right:0;
+  bottom: 50%;
+  left:711px;
   width: 384px;
   height: 710px;
-  vertical-align: bottom;
 }
 
 .main2__right-pic-img{
