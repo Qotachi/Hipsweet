@@ -1,4 +1,5 @@
 .section3 {
+  padding-bottom: 120px;
   font-family: "Arial";
   background: url(../../assets/images/section3/section3-bg.png);
   background-size: cover;
@@ -6,32 +7,14 @@
   background-repeat: no-repeat;
 }
 
-.main2__right{
-  position: relative;
-}
-
-.main2__right-pic{
-  position: absolute;
-  right:0;
-  bottom: 50%;
-  left:711px;
-  width: 384px;
-  height: 710px;
-}
-
-.main2__right-pic-img{
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .main3 {
+  display: block;
+  padding-top: 120px;
   text-align: center;
 }
 
 .main3__top{
   text-align: center;
-  padding-top: 110px;
   .title{
     display: inline-block;
     color: #393939;
@@ -53,7 +36,6 @@
 
 .main3__bottom{
   display: inline-block;
-  padding-bottom: 90px;
 }
 
 .main3__bottom-list-text{
@@ -89,25 +71,16 @@
 
 .main3__bottom-pic{
   position: relative;
-  width: 200px;
+  width: 230px;
   height: 240px;
-}
-
-.main3__bottom-img-shape{
-  display: block;
-  position: absolute;
-  bottom: 30px;
-  left: 25px;
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
+  max-width: 100%;
 }
 
 .main3__bottom-img{
   display: block;
   position: absolute;
-  bottom: 43px;
-  left: 25px;
-  width: 180px;
-  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
 }

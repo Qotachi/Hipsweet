@@ -130,6 +130,11 @@
 		height: 70px;
 		content:"";
 	}
+	a{
+		outline: 0;
+		text-decoration: none;
+		color: black;
+	}
 }
 
 .nav__list-item-team-dropdown-item{
@@ -432,7 +437,7 @@
 	border-radius: 25px;
 	color: $red;
 	cursor: pointer;
-	outline: 0;
+	outline: none;
 	transition: all .5s;
 	&:hover{
 		background-color: $brown;

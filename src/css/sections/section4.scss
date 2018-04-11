@@ -1,5 +1,6 @@
 .section4 {
   font-family: Arial;
+  padding: 120px 0;
   background: rgba(252,251,251,1);
   background: radial-gradient(ellipse at center, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfbfb', endColorstr='#cdcccd', GradientType=1 );
@@ -7,7 +8,6 @@
 
 .main4__top {
   @extend %clearfix;
-  padding-top: 85px;
   .description {
     position: relative;
     font-style: italic;
@@ -54,6 +54,7 @@
     max-width: 145px;
     margin-bottom: 15px;
     font-size: 30px;
+    transition: color .3s;
   }
   .triangle{
     top: 100%;
@@ -88,6 +89,7 @@
 .tab-bar__list-item-description {
   letter-spacing: 1px;
   color: $grey;
+  transition: color .3s;
 }
 
 .description__tab-list {
@@ -112,10 +114,6 @@
   max-width: 275px;
 }
 
-.main4__description-bold {
-  font-weight: bold;
-}
-
 .quote-pic {
   position: absolute;
   bottom: 480px;
@@ -135,7 +133,6 @@
 
 //----------------------<<form>>----------------------\\
 .main4__bottom {
-  padding-bottom: 120px;
   text-align: center;
 }
 
