@@ -6,6 +6,9 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  p{
+    margin: 0;
+  }
 }
 
 .main5__top{
@@ -31,6 +34,7 @@
 }
 
 .acco-item{
+  display: block;
   margin-bottom: 40px;
   &:last-child{
     margin-bottom: 0;

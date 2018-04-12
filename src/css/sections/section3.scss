@@ -5,6 +5,9 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  p{
+    margin: 0;
+  }
 }
 
 .main3 {
@@ -55,6 +58,7 @@
 }
 
 .main3__bottom-list-item{
+  display: block;
   float: left;
   max-width: 230px;
   margin-right: 60px;

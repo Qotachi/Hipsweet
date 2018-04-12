@@ -10,6 +10,9 @@
 	background: rgba(201,49,54,1);
 	background: linear-gradient(to right, rgba(201,49,54,1) 0%, rgba(162,22,27,1) 91%, rgba(162,22,27,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c93136', endColorstr='#a2161b', GradientType=1 );
+	p{
+		margin: 0;
+	}
 }
 
 //----------------------<<header>>----------------------\\
@@ -53,6 +56,12 @@
 	@extend %clearfix;
 	display: block;
 	padding: 22px 0;
+	a{
+		display: block;
+		text-decoration: none;
+		color: white;
+		outline: none;
+	}
 }
 
 .nav__list-item{
@@ -68,10 +77,7 @@
 }
 
 .nav__list-item-team-link{
-	display: block;
 	position: relative;
-	text-decoration: none;
-	color: white;
 }
 
 .fa-angle-down{
@@ -264,8 +270,8 @@
 }
 
 .main1__left-ingredients-link{
-	position: relative;
 	display: block;
+	position: relative;
 	text-decoration: none;
 	color: white;
 }
@@ -425,11 +431,15 @@
 }
 
 .main1__right-order-link{
+	display: inline-block;
 	float: left;
 	padding: 20px 0;
+	text-decoration: none;
+	outline: none;
 }
 
 .main1__right-order-button{
+	display: block;
 	padding: 10px 20px;
 	font-size: 14px;
 	font-weight: bold;

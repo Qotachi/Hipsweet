@@ -1,12 +1,16 @@
 $(document).ready(function () {
 
     //----------------------<<svg-for-ie>>----------------------\\
-    svg4everybody();
+    (function () {
+        svg4everybody();
+    }());
 
     //----------------------<<bxSlider>>----------------------\\
-    $('.slider').bxSlider({
-        speed: 1000
-    });
+    (function () {
+        $('.slider').bxSlider({
+            speed: 1000
+        });
+    }());
 
     //----------------------<<anchor-scroll>>----------------------\\
     $(function() {
@@ -21,7 +25,9 @@ $(document).ready(function () {
 
 
     //----------------------<<jquery-mask>>----------------------\\
-    $('#tel').mask('8 (000) 000-00-00');
+    (function () {
+        $('#tel').mask('8 (000) 000-00-00');
+    }());
 
     //----------------------<<tab-bar>>----------------------\\
     (function () {
@@ -92,27 +98,29 @@ $(document).ready(function () {
     }());
 
     //----------------------<<map>>----------------------\\
-    ymaps.ready(init);
+    (function () {
+        ymaps.ready(init);
 
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [59.935775, 30.308935],
-            zoom: 16,
-            controls: []
-        });
-        var myPlacemark = new ymaps.Placemark(
-            [59.935775, 30.308935],
-            {
-                hintContent: 'Hipsweet',
-                balloonContent: 'Адмиралтейский проспект, дом 10'
-            },
-            {
-                iconLayout: 'default#image',
-                iconImageHref: '../assets/images/section6/marker.png',
-                iconImageSize: [42, 59],
-                iconImageOffset: [-20, -60]
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [59.935775, 30.308935],
+                zoom: 16,
+                controls: []
             });
-        myMap.behaviors.disable(['scrollZoom']);
-        myMap.geoObjects.add(myPlacemark);
-    };
+            var myPlacemark = new ymaps.Placemark(
+                [59.935775, 30.308935],
+                {
+                    hintContent: 'Hipsweet',
+                    balloonContent: 'Адмиралтейский проспект, дом 10'
+                },
+                {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../assets/images/section6/marker.png',
+                    iconImageSize: [42, 59],
+                    iconImageOffset: [-20, -60]
+                });
+            myMap.behaviors.disable(['scrollZoom']);
+            myMap.geoObjects.add(myPlacemark);
+        };
+    }());
 });

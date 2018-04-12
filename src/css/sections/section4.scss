@@ -4,6 +4,9 @@
   background: rgba(252,251,251,1);
   background: radial-gradient(ellipse at center, rgba(252,251,251,1) 0%, rgba(252,251,251,1) 21%, rgba(205,204,205,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfbfb', endColorstr='#cdcccd', GradientType=1 );
+  p{
+    margin: 0;
+  }
 }
 
 .main4__top {
@@ -47,7 +50,6 @@
 .tab-bar__list-item {
   display: inline-block;
   position: relative;
-  padding: 25px 30px;
   border-radius: 25px;
   transition: background-color .3s;
   .title {
@@ -83,6 +85,7 @@
 
 .tab-bar__link {
   display: block;
+  padding: 25px 30px;
   cursor: pointer;
 }
 
@@ -104,7 +107,6 @@
   @extend %clearfix;
   display: none;
   p{
-    margin-top: 0;
     margin-bottom: 25px;
   }
 }
@@ -116,7 +118,7 @@
 
 .quote-pic {
   position: absolute;
-  bottom: 480px;
+  bottom: 580px;
   left: 310px;
 }
 

@@ -5,6 +5,9 @@
   background: rgba(200,200,201,1);
   background: linear-gradient(to right, rgba(200,200,201,1) 0%, rgba(230,231,231,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c9', endColorstr='#e6e7e7', GradientType=1 );
+  p{
+    margin: 0;
+  }
 }
 
 .main2{
@@ -31,6 +34,7 @@
 }
 
 .main2__left-list-item{
+  display: block;
   float: left;
   margin-right: 35px;
   margin-bottom: 20px;
