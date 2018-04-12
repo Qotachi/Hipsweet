@@ -179,9 +179,11 @@
 }
 
 .form__right {
-  position: relative;
-  float: right;
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 50%;
+  height: 100%;
   padding: 65px 45px;
   border-radius: 0 20px 20px 0;
   background-color: rgba(black, .7);
@@ -216,14 +218,14 @@
   color: white;
   padding-left: 20px;
   &:after {
-    content: '';
     display: block;
-    height: 14px;
-    width: 13px;
-    background-image: url(../../assets/images/section4/empty-checkbox.png);
     position: absolute;
     top: 2px;
     left: 1px;
+    width: 13px;
+    height: 14px;
+    content: '';
+    background-image: url(../../assets/images/section4/empty-checkbox.png);
   }
 }
 

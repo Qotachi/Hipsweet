@@ -62,25 +62,10 @@
 }
 
 .main2__right{
-  position: relative;
-  float: right;
+  position: absolute;
+  left: 65%;
   width: 384px;
-  height: 710px;
-  background: url('../../assets/images/section2/main2__right-img.png') no-repeat;
+  height: 100%;
+  background: url('../../assets/images/section2/main2__right-img.png') no-repeat bottom;
   background-size: contain;
-}
-
-.main2__right-pic{
-  //position: absolute;
-  //right:0;
-  //bottom: 50%;
-  //left:711px;
-  //width: 384px;
-  //height: 710px;
-}
-
-.main2__right-pic-img{
-  //display: block;
-  //max-width: 100%;
-  //max-height: 100%;
 }
