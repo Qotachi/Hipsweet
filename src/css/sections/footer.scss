@@ -7,7 +7,7 @@
   @extend %clearfix;
   float: left;
   padding-top: 29px;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 .logo-footer{
@@ -25,20 +25,32 @@
 
 .footer__middle{
   @extend %clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   float: left;
-  padding-top: 50px;
+  min-width: 630px;
+  height: 125px;
   font-size: 14px;
   color: $grey;
+  p{
+    margin: 0;
+  }
 }
 
 .copyright{
   float: left;
+  max-width: 250px;
   padding-right: 40px;
+  text-align: center;
 }
 
 .address{
   float: right;
   max-width: 340px;
+  text-align: center;
 }
 
 .footer__right{

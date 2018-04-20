@@ -160,7 +160,7 @@
 		width: 9px;
 		height: 18px;
 		content: "";
-		background-image: url(../../assets/images/section1/ico/yellow-arrow.png);
+		background-image: url('../../assets/images/section1/ico/yellow-arrow.png');
 		opacity: 0;
 	}
 	&:hover{
@@ -179,7 +179,7 @@
 	width: 40px;
 	height: 13px;
 	margin-left: -20px;
-	background-image: url("../../assets/images/section1/ico/arrow.png");
+	background-image: url('../../assets/images/section1/ico/arrow.png');
 }
 
 //----------------------<<header-menu>>----------------------\\
@@ -239,7 +239,6 @@
 //----------------------<<main>>----------------------\\
 .main1{
 	@extend %clearfix;
-	position: relative;
 	min-height: 450px;
 	cursor: pointer;
 }
